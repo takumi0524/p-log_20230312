@@ -40,7 +40,7 @@ class ContactFormController extends Controller
      */
     public function create()
     {
-        return view('contacts.create');
+        return view('Contacts.create');
     }
 
     /**
@@ -65,7 +65,7 @@ class ContactFormController extends Controller
             'community' => $request->community,
         ]);
 
-        return to_route('contacts.index');
+        return to_route('Contacts.index');
     }
 
     /**
@@ -85,7 +85,7 @@ class ContactFormController extends Controller
         $pianohon = CheckFormService::checkPianohon($contact);
         $soundproofhon = CheckFormService::checkSoundproofhon($contact);
 
-        return view('contacts.show', compact('contact','age','gender','pstartage','totalhistory','pianohon','soundproofhon'));
+        return view('Contacts.show', compact('contact','age','gender','pstartage','totalhistory','pianohon','soundproofhon'));
     }
 
     /**
@@ -98,7 +98,7 @@ class ContactFormController extends Controller
     {
         $contact = ContactForm::find($id);
 
-        return view('contacts.edit', compact('contact'));
+        return view('Contacts.edit', compact('contact'));
     }
 
     /**
@@ -122,7 +122,7 @@ class ContactFormController extends Controller
         $contact->community = $request->community;
         $contact->save();
 
-        return to_route('contacts.index');
+        return to_route('Contacts.index');
     }
 
     /**
@@ -136,6 +136,6 @@ class ContactFormController extends Controller
         $contact = ContactForm::find($id);
         $contact->delete();
 
-        return to_route('contacts.index');
+        return to_route('Contacts.index');
     }
 }
