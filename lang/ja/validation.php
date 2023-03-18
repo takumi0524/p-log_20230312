@@ -154,7 +154,17 @@ return [
     */
 
     'attributes' => [
-        'password' =>'パスワード'
+        'password' =>'パスワード',
+        'username' => 'ユーザーネーム',
+        'email' => 'メールアドレス',
+        'age' => '年齢',
+        'gender' => '性別',
+        'pstartage' => 'ピアノ開始年齢',
+        'totalhistory' => '通算演奏歴',
+        'pianohon' => 'ピアノ所持',
+        'soundproofhon' => '防音室有無',
+        'community' => '所属コミュニティ',
+        'caution' => '注意事項',
     ],
 
 ];

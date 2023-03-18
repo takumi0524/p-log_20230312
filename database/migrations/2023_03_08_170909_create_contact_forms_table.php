@@ -23,7 +23,8 @@ return new class extends Migration
             $table->tinyInteger('totalhistory'); // 通算演奏歴
             $table->boolean('pianohon'); // ピアノ所持
             $table->boolean('soundproofhon'); // 防音室所持
-            $table->boolean('communityhon'); // 所属コミュニティ有無
+            // $table->boolean('communityhon'); // 所属コミュニティ有無
+            $table->string('community', 255); // 所属コミュニティ有無
             $table->timestamps();
         });
     }

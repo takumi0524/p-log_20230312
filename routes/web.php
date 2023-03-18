@@ -29,6 +29,11 @@ Route::prefix('contacts') // 頭に contacts をつける
 ->group(function(){ // グループ化
     Route::get('/', 'index')->name('index'); //トップページ(いまのところ、お問い合わせ一覧)
     Route::get('/create', 'create')->name('create'); // プロフィール登録画面
+    Route::post('/', 'store')->name('store'); //プロフィール登録画面で入力した内容をDBに送る
+    Route::get('/{id}', 'show')->name('show'); //プロフィール詳細画面
+    Route::get('/{id}/edit', 'edit')->name('edit'); //プロフィール編集画面
+    Route::post('/{id}', 'update')->name('update'); //プロフィール更新
+    Route::post('/{id}/destroy', 'destroy')->name('destroy'); //プロフィール削除
 });
 
 Route::get('/', function () {
